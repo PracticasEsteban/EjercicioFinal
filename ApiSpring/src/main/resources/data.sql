@@ -1,9 +1,9 @@
-INSERT INTO `user` (`name`,`surnames`,`description`,`image`,`date`) VALUES
-('Esteban','Jimenez','Informático que le gustan las motos', 'FfFfFf', '2022-04-27'),
-('Raul','Flores','Futbolista e ingeniero', 'FfFfFf', '2022-04-27'),
-('Victor','Banyeres','Motorista cualificado', 'FfFfFf', '2022-04-27'),
-('Carla','Calatayud','Amante de las mariposas', 'FfFfFf', '2022-04-27'),
-('Maria','Rispa','Que lokee lokillos', 'FfFfFf', '2022-04-27');
+INSERT INTO `user` (`name`,`surnames`,`email`,`description`,`image`,`date`) VALUES
+('Esteban','Jimenez','loquesea@gmail.com','Informático que le gustan las motos', 'FfFfFf', '2022-04-27'),
+('Raul','Flores','loquesea@gmail.com','Futbolista e ingeniero', 'FfFfFf', '2022-04-27'),
+('Victor','Banyeres','loquesea@gmail.com','Motorista cualificado', 'FfFfFf', '2022-04-27'),
+('Carla','Calatayud','loquesea@gmail.com','Amante de las mariposas', 'FfFfFf', '2022-04-27'),
+('Maria','Rispa','loquesea@gmail.com','Que lokee lokillos', 'FfFfFf', '2022-04-27');
 
 
 INSERT INTO `historieta` (`user_id`,`text`,`date`) VALUES

@@ -34,6 +34,7 @@ CREATE TABLE user (
     id bigint auto_increment,
     name varchar(50) NOT NULL,
     surnames varchar(100) NOT NULL,
+    email varchar(50) DEFAULT NULL,
     description varchar(300) NOT NULL,
     image blob NOT NULL,
     date date NOT NULL,
