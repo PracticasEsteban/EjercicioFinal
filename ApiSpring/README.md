@@ -58,7 +58,7 @@
       [GET]  localhost:9000/api/friend/recive/1  -> Get All invitaciones de amistat recividas del usuario 1 no aceptadas.
       [GET]  localhost:9000/api/friend/send/1  -> Get All invitaciones de amistat enviadas del usuario 1 no aceptadas por los otros usuarios.
       [GET]  localhost:9000/api/friend/accept/1  -> Get todos los amigos del usuario 1 (Info imagen, name , fecha etc, No info sensible).
-      [GET]  localhost:9000/api/friend?search=friend.accpet ->Obtenemos todas las relaciones aceptadas (friend.accept ,friend.date, userSend.id, userSend.name, userRecive,id, userRecive,name etc )
+      [GET]  localhost:9000/api/friend?search=friend.accpet ->Obtenemos todas las relaciones aceptadas (friend.accept ,friend.date, userSend.id, userSend.name, userRecive.id, userRecive.name etc )
       [POST] localhost:9000/api/friend -> +JSON Friend , add friend
       [PUT]  localhost:9000/api/friend/1 -> +JSON friend , edit friend id 1
       [DELETE]  localhost:9000/api/friend/1 -> +JSON friend , delete friend id 1       
