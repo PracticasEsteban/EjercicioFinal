@@ -108,6 +108,13 @@ public class HistorietaEstadoCustomJPADAO implements IHistorietaEstadoCustomJPAD
             case "historieta":
 
                 switch (atributo) {
+                    case "id":
+                        if (condicion.equals(":")) {
+                            clausulaWhere.add(" h.id = :hid ");
+                            parametros.put("hid", Integer.parseInt(valor));
+                            break;
+                        }
+                        break;
                     case "text":
                         if (condicion.equals(":")) {
                             clausulaWhere.add(" h.text LIKE :htext ");
