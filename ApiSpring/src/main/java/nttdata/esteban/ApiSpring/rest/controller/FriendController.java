@@ -1,7 +1,7 @@
 package nttdata.esteban.ApiSpring.rest.controller;
 
 import nttdata.esteban.ApiSpring.rest.dto.FriendDTO;
-import nttdata.esteban.ApiSpring.rest.dto.UserDTO;
+
 import nttdata.esteban.ApiSpring.rest.service.FriendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-
 @RestController
 @RequestMapping("/friend")
 public class FriendController {

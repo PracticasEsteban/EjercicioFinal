@@ -20,6 +20,7 @@ public class UserMapper {
         userDTO.setEmail(user.getEmail());
         userDTO.setDescription(user.getDescription());
         userDTO.setImage(user.getImage());
+        userDTO.setDate(user.getDate());
 
         if (!conTodo) return userDTO;
 
@@ -61,6 +62,7 @@ public class UserMapper {
         user.setEmail(userDTO.getEmail());
         user.setDescription(userDTO.getDescription());
         user.setImage(userDTO.getImage());
+        user.setDate(userDTO.getDate());
 
         if (!conTodo) return user;
 

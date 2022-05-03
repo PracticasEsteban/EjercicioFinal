@@ -1,5 +1,6 @@
 package nttdata.esteban.ApiSpring.rest.service;
 
+import nttdata.esteban.ApiSpring.repository.customJPADAO.IUserCustomJPADAO;
 import nttdata.esteban.ApiSpring.repository.jpa.IUserJPADAO;
 import nttdata.esteban.ApiSpring.repository.modelo.User;
 import nttdata.esteban.ApiSpring.rest.dto.UserDTO;
@@ -17,6 +18,9 @@ public class UserService {
     @Autowired
     IUserJPADAO iUserJPADAO;
 
+    @Autowired
+    IUserCustomJPADAO iUserCustomJPADAO;
+
     public Long count(){return this.iUserJPADAO.count();}
 
 
@@ -28,7 +32,7 @@ public class UserService {
     if (search.equalsIgnoreCase("false")){
         users = this.iUserJPADAO.findAll();
     }else{
-        users = null;
+        users = this.iUserCustomJPADAO.findAllWithSearch(search);
     }
 
     return UserMapper.map(users,conTodo);

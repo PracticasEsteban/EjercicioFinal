@@ -1,6 +1,7 @@
 package nttdata.esteban.ApiSpring.rest.service;
 
 
+import nttdata.esteban.ApiSpring.repository.customJPADAO.IFriendCustomJPADAO;
 import nttdata.esteban.ApiSpring.repository.jpa.IFriendJPADAO;
 import nttdata.esteban.ApiSpring.repository.modelo.Friend;
 
@@ -22,6 +23,10 @@ public class FriendService {
     IFriendJPADAO iFriendJPADAO;
 
 
+    @Autowired
+    IFriendCustomJPADAO iFriendCustomJPADAO;
+
+
     public Long count(){return this.iFriendJPADAO.count();}
 
 
@@ -33,7 +38,7 @@ public class FriendService {
         if (search.equalsIgnoreCase("false")){
            friends = this.iFriendJPADAO.findAll();
         }else{
-            friends = null;
+            friends = this.iFriendCustomJPADAO.findAllWithSearch(search);
         }
 
         return FriendMapper.map(friends,conTodo);

@@ -64,7 +64,7 @@ public class HistorietaMapper {
         historieta.setId(historietaDTO.getId());
         historieta.setUser(UserMapper.map(historietaDTO.getUser(),false));
         historieta.setDate(historietaDTO.getDate());
-        historieta.setText(historieta.getText());
+        historieta.setText(historietaDTO.getText());
         if (!conTodo) return  historieta;
 
 

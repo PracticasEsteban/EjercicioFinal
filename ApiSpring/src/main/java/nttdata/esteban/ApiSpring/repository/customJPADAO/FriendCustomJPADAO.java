@@ -82,12 +82,12 @@ public class FriendCustomJPADAO implements IFriendCustomJPADAO{
                     case "accept":
                         if (condicion.equals(":") && valor.equalsIgnoreCase("true")) {
                             clausulaWhere.add(" f.accept = :faccept ");
-                            parametros.put("faccept", "TRUE");
+                            parametros.put("faccept", Boolean.TRUE);
                             break;
                         }
                         if (condicion.equals(":") && valor.equalsIgnoreCase("false")) {
                             clausulaWhere.add(" f.accept = :faccept ");
-                            parametros.put("faccept", "FALSE");
+                            parametros.put("faccept", Boolean.FALSE);
                             break;
                         }
 
