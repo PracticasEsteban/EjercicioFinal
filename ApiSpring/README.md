@@ -7,3 +7,6 @@
      Puerto: 9000
      Path: api
      Ejemplo: localhost:9000/api/post
+     
+     
+### **PETICIONES REST**     
