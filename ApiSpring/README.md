@@ -13,8 +13,8 @@
 
       Filtrados hechos por variable search=user.name:Ejemplo,user.surnames;Ejemplo (entidad, atributo, condicion, valor). Filtrado por campos del modelo a utilizar. Las relaciones sql estan hechas por los modelos y jpa (Se obtiene objeto cporel id no el id),
       
-      Caracter : (LIKE)
-      Caracter ; (=)
+      Condición Carácter : (LIKE)
+      Condición Carácter ; (=)
 
 #### REST person TABLA USER 
 
