@@ -2,6 +2,7 @@ package nttdata.esteban.ApiSpring.rest.controller;
 
 import nttdata.esteban.ApiSpring.rest.dto.FriendDTO;
 
+import nttdata.esteban.ApiSpring.rest.dto.UserDTO;
 import nttdata.esteban.ApiSpring.rest.service.FriendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +20,35 @@ public class FriendController {
     @GetMapping("/count")
     public Long count(){
         return this.friendService.count();
+    }
+
+    @GetMapping("/user/{id}/friend/{id2}")
+    public FriendDTO findRelationUserAndFriend(@PathVariable Integer id,@PathVariable Integer id2){
+        FriendDTO relationFriend = this.friendService.findRelationFriend(id,id2);
+        if (relationFriend == null){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "La asosiacion Amigo no fue encontrada");
+        }
+        return this.friendService.findRelationFriend(id,id2);
+
+    }
+
+    @GetMapping("/recive/{id}")
+    public List<FriendDTO> findAllReciveNoAccept(@PathVariable Integer id){
+
+        return this.friendService.findAllReciveNoAccept(id);
+
+    }
+    @GetMapping("/send/{id}")
+    public List<FriendDTO> findAllSendNoAccept(@PathVariable Integer id){
+
+        return this.friendService.findAllSendNoAccept(id);
+
+    }
+    @GetMapping("/accept/{id}")
+    public List<UserDTO> findAllFriendAccept(@PathVariable Integer id){
+
+        return this.friendService.findAllFriendAccept(id);
+
     }
 
 

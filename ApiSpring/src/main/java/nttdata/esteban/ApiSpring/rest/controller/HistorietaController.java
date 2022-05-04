@@ -24,6 +24,12 @@ public class HistorietaController {
         return this.historietaService.count();
     }
 
+
+    @GetMapping("/person/{id}")
+    public List<HistorietaDTO> findAllPersonWithFriends(@PathVariable Integer id){
+        return this.historietaService.findAllPersonWithFriends(id);
+    }
+
     @GetMapping(value = "")
     public List<HistorietaDTO> findAll(@RequestParam(required = false, defaultValue = "false")Boolean conTodo , @RequestParam(required = false, defaultValue = "false")String search){
         return this.historietaService.findAll(conTodo, search);

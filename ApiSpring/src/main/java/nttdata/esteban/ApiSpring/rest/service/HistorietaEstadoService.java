@@ -1,6 +1,7 @@
 package nttdata.esteban.ApiSpring.rest.service;
 
 
+import nttdata.esteban.ApiSpring.repository.customJPADAO.IHistorietaEstadoCustomJPADAO;
 import nttdata.esteban.ApiSpring.repository.jpa.IHistorietaEstadoJPADAO;
 import nttdata.esteban.ApiSpring.repository.modelo.HistorietaEstado;
 import nttdata.esteban.ApiSpring.rest.dto.HistorietaEstadoDTO;
@@ -18,6 +19,9 @@ public class HistorietaEstadoService {
     @Autowired
     IHistorietaEstadoJPADAO iHistorietaEstadoJPADAO;
 
+    @Autowired
+    IHistorietaEstadoCustomJPADAO iHistorietaEstadoCustomJPADAO;
+
 
     public Long count(){
         return this.iHistorietaEstadoJPADAO.count();
@@ -31,7 +35,7 @@ public class HistorietaEstadoService {
         if (search.equalsIgnoreCase("false")){
             historietasEstado = this.iHistorietaEstadoJPADAO.findAll();
         }else{
-            historietasEstado = null;
+            historietasEstado = this.iHistorietaEstadoCustomJPADAO.findAllWithSearch(search);
         }
 
         return HistorietaEstadoMapper.map(historietasEstado,conTodo);
