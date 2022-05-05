@@ -61,7 +61,30 @@
       [GET]  localhost:9000/api/friend?search=friend.accpet ->Obtenemos todas las relaciones aceptadas (friend.accept ,friend.date, userSend.id, userSend.name, userRecive.id, userRecive.name etc )
       [POST] localhost:9000/api/friend -> +JSON Friend , add friend
       [PUT]  localhost:9000/api/friend/1 -> +JSON friend , edit friend id 1
-      [DELETE]  localhost:9000/api/friend/1 -> +JSON friend , delete friend id 1       
+      [DELETE]  localhost:9000/api/friend/1 -> +JSON friend , delete friend id 1
+      
+      
+  #### REST evento TABLA evento
+
+      [GET]  localhost:9000/api/evento/count -> Get numero total de Eventos
+      [GET]  localhost:9000/api/evento  -> Get All Eventos
+      [GET]  localhost:9000/api/evento?conTodo=true  -> Get All Eventos con el array de EventosUser incluido.
+      [GET]  localhost:9000/api/evento/1 -> Get  evento id 1 
+      [POST] localhost:9000/api/evento -> +JSON Evento , add evento
+      [PUT]  localhost:9000/api/evento/1 -> +JSON evento , edit evento id 1
+      [DELETE]  localhost:9000/api/evento/1 -> +JSON evento , delete evento id 1 
+      
+      
+  #### REST eventoUser TABLA evento_user
+
+      [GET]  localhost:9000/api/eventoUser/count -> Get numero total de Users apuntados a eventos
+      [GET]  localhost:9000/api/eventoUser  -> Get All users apuntados a eventos
+      [GET]  localhost:9000/api/eventoUser?conTodo=true  -> Get All Eventos con el objeto de evento (false sin objeto evento) de EventosUser incluido.
+      [GET]  localhost:9000/api/eventoUser/1 -> Get  evento user id 1 
+      [GET]  localhost:9000/api/eventoUser?search:user.name -> Get Eventos donde esta el user apuntado
+      [POST] localhost:9000/api/eventoUser -> +JSON EventoUser , add eventoUser
+      [PUT]  localhost:9000/api/eventoUser/1 -> +JSON eventoUser , edit eventoUser id 1
+      [DELETE]  localhost:9000/api/eventoUser/1 -> +JSON eventoUser , delete eventoUser id 1               
            
       
       
