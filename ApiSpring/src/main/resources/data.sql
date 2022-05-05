@@ -36,4 +36,10 @@ INSERT INTO `friend` (`user_send_id`,`user_recive_id`,`accept`,`date`) VALUES
 (2,3,TRUE, '2022-04-28'),
 (1,4,TRUE, '2022-04-28');
 
+INSERT INTO `evento` (`name`,`description`,`image`,`date`) VALUES
+('Quedada','Quedada entre coleguitas. !Apuntarse!','FfFfFf', '2022-04-28'),
+('QuedadaMAYOR','FINDE DE FIESTA. !Apuntarse!','FfFfFf', '2022-04-29');
 
+
+INSERT INTO `evento_user` (`evento_id`,`user_id`,`date`) VALUES
+(1,2,'2022-04-29');
