@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
 
+
+#### AppAngular 
+    
+     App Angular, para que funcione tener el SpringBoot Activo para que se puedan realizar las peticiones REST. A falta de Listar Eventos y puntuacion Historietas. 
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
