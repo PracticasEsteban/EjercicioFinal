@@ -1,1 +1,3 @@
-<p>page-mis-historietas works!</p>
+<div><app-user-info></app-user-info></div>
+<div><app-post-historieta (sendPost) = "getHistorietas($event)"></app-post-historieta></div>
+<div><app-list-historietas [arrayPosts]="arrayHistorietas" (sendPost) = "getHistorietas($event)" [user]="user"></app-list-historietas></div>

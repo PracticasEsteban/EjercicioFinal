@@ -1,1 +1,11 @@
-<p>page-mis-colegas works!</p>
+<div><app-user-info></app-user-info></div>
+<div><app-search-friend (sendName)="getByName($event)"></app-search-friend></div>
+<div class="inLine">
+    <div>
+        
+        <app-list-persons [arrayUser]="arrayUser" (sendUser)="sendUser($event)"></app-list-persons>
+    </div>
+    <div class="right">
+        <app-friend-info [userFriend]="userFriend" [user]="user"></app-friend-info>
+    </div>
+</div>

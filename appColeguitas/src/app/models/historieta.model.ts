@@ -5,6 +5,6 @@ export class Historieta{
         public id:number,
         public user:User,
         public text:string,
-        public date:Date
+        public date:string
     ){}
 }

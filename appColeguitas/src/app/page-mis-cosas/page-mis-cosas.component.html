@@ -1,1 +1,13 @@
-<p>page-mis-cosas works!</p>
+<div><app-user-info></app-user-info></div>
+<div><app-user-description [text]="user.description"></app-user-description></div>
+<div class="inLine">
+    <div>
+        <h3>Historietas Amigos y Mias</h3>
+     <app-list-historietas [arrayPosts]="arrayPosts"  [user]="user" (sendPost)="getPosts($event)"></app-list-historietas>
+    </div>
+    <div>
+        <h3>Mis coleguillas</h3>
+        <app-list-friends [arrayFriends]="arrayFriends" [user]="user" (changeFriend)="getFriends($event)"></app-list-friends>
+    </div>
+
+</div>

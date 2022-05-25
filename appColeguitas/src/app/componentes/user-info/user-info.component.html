@@ -1,0 +1,19 @@
+<section class="profile">
+  <header class="header">
+    <div class="details" (click)="openUpdate()">
+      <img src="{{user.image}}" alt="John Doe" class="profile-pic">
+      <h1 class="heading">{{user.name}} {{user.surnames}}</h1>
+      <div class="location">
+        <p>{{user.email}}</p>
+      </div>
+      <div class="stats">
+        <div class="col-4">
+          <h6>Fecha Entrada</h6>
+          <p>{{user.date}}</p>
+        </div>
+       
+      </div>
+    </div>
+  </header>
+</section>
+

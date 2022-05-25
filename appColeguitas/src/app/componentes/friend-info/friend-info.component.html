@@ -1,0 +1,24 @@
+<div class="card-container" *ngIf="userFriend!=undefined">
+	<img class="round" src="{{userFriend.image}}" alt="user" width="127" height="128" />
+	<h3>{{userFriend.name}}</h3>
+	<h6>{{userFriend.surnames}}</h6>
+	<p *ngIf="friendRelation.accept == true">{{userFriend.description}}</p>
+	<div class="buttons">
+		<button class="primary" *ngIf="friendRelation == false" (click)="addFriend()">
+			Añadir Amigo
+		</button>
+        <button class="primary" disabled *ngIf="friendRelation.accept == false">
+			Pendiente
+		</button>
+        <button class="primary" disabled *ngIf="friendRelation.accept == true">
+			Sois Amigos
+		</button>
+        <button class="primary ghost" *ngIf="friendRelation.accept == true" (click)="deleteFriend()">
+			Eliminar Amistat
+		</button>
+		
+	</div>
+	<div class="skills">
+	
+	</div>
+</div>
