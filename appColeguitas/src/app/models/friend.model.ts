@@ -5,6 +5,6 @@ export class Friend{
         public userSend:User,
         public userRecive:User,
         public accept:Boolean,
-        public date:Date
+        public date:string
     ){}
 }

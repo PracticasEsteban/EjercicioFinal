@@ -1,0 +1,11 @@
+<div id="wrapper">
+
+	<h4>Comparte con tus amigos!</h4>
+	<form id="paper" method="get" (ngSubmit)="onSubmit()">
+		<textarea placeholder="Tu nueva historieta!!" id="text" name="text" rows="4"  [(ngModel)]="textArea" style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>  
+		<br>
+		<input id="button" type="submit" value="Crear">
+		
+	</form>
+
+</div>

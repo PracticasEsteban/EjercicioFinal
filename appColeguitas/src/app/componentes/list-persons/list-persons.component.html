@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="people-nearby">
+              
+              <div class="nearby-user" *ngFor="let item of arrayUser" (click)="onClickFriend(item)">
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
+                    <img src="{{item.image}}" alt="user" class="profile-photo-lg">
+                  </div>
+                  <div class="col-md-10 col-sm-10">
+                    <h5>{{item.name}} {{item.surnames}}</h5>
+                    <p>{{item.email}}</p>
+                    <p class="text-muted">{{item.date}}</p>
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+    	</div>
+	</div>
+</div>

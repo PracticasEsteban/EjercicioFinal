@@ -22,17 +22,14 @@ public class User {
     private String description;
 
 
-    @Lob
-    @Column(name="image")
-    @Type(type="org.hibernate.type.BinaryType")
-    private byte[] image;
+    private String image;
 
     private Date date;
 
     public User() {
     }
 
-    public User(Integer id, String name, String surnames, String email, String description, byte[] image, Date date) {
+    public User(Integer id, String name, String surnames, String email, String description, String image, Date date) {
         this.id = id;
         this.name = name;
         this.surnames = surnames;
@@ -82,12 +79,13 @@ public class User {
         this.description = description;
     }
 
-    public byte[] getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(byte[] image) {
+    public void setImage(String image) {
         this.image = image;
+
     }
 
     public Date getDate() {

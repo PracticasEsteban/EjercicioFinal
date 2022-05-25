@@ -12,14 +12,14 @@ public class UserDTO {
     private String surnames;
     private String email;
     private String description;
-    private byte[] image;
+    private String image;
     private Date date;
 
 
     public UserDTO() {
     }
 
-    public UserDTO(Integer id, String name, String surnames, String email, String description, byte[] image, Date date) {
+    public UserDTO(Integer id, String name, String surnames, String email, String description, String image, Date date) {
         this.id = id;
         this.name = name;
         this.surnames = surnames;
@@ -69,11 +69,11 @@ public class UserDTO {
         this.description = description;
     }
 
-    public byte[] getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(byte[] image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

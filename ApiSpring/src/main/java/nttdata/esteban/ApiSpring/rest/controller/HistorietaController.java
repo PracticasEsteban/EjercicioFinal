@@ -12,6 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/post")
 public class HistorietaController {
 
@@ -66,8 +67,10 @@ public class HistorietaController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT, reason = "Historieta eliminada correctamente")
-    public void delete(@RequestBody HistorietaDTO historietaDTO){
+    public void delete(@PathVariable Integer id){
 
+        HistorietaDTO historietaDTO=new HistorietaDTO();
+        historietaDTO.setId(id);
         this.historietaService.delete(historietaDTO);
     }
 }

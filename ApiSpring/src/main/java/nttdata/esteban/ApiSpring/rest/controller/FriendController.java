@@ -11,6 +11,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 @RestController
+@CrossOrigin
 @RequestMapping("/friend")
 public class FriendController {
 
@@ -87,8 +88,10 @@ public class FriendController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT, reason = "Friend fue eliminado")
-    public void delete(@RequestBody FriendDTO friendDTO){
+    public void delete(@PathVariable Integer id){
 
+        FriendDTO friendDTO=new FriendDTO();
+        friendDTO.setId(id);
         this.friendService.delete(friendDTO);
     }
 

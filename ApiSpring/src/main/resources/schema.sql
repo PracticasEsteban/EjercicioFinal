@@ -36,7 +36,7 @@ CREATE TABLE user (
     surnames varchar(100) NOT NULL,
     email varchar(50) DEFAULT NULL,
     description varchar(300) NOT NULL,
-    image blob NOT NULL,
+    image varchar(100) NOT NULL,
     date date NOT NULL,
     CONSTRAINT user_pk PRIMARY KEY (id)
 );
